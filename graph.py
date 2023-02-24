@@ -1,6 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from string import ascii_lowercase, ascii_uppercase
+from string import ascii_lowercase
 from random import randrange, choices
 from sys import maxsize
 
