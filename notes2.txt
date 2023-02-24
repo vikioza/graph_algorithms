@@ -1,0 +1,35 @@
+obvod
+g - neparne
+L0          1
+L1          d
+L2          d(d-1)
+L3          d(d-1)**2
+...
+L(g-1)/2    d(d-1)**(g-3)/2
+
+MH = 1 + d + d(d-1) + ... + d(d-1)**(g-3)/2
+
+g - parne
+L0          2
+L1          2(d-1)
+L2          2(d-1)**2
+...
+L(g-2)/2    2(d-1)**(g-2)/2
+
+MH = 1 + 2d(d-1) + 2d(d-1)**2 + 2d(d-1)**(g-2)/2
+
+
+automorfizmus - vie sa zobrazit sam na seba
+
+vrcholovo tranzitivny - pre lubovolnu dvojicu vrcholov u, v existuje automorfizmus f, ktory zobrazi u na v, teda f(u) = v
+
+hranovo tranzitivny - pre kazde dve hrany e1, e2 existuje f zobrazujuci hranu e1 na e2, teda f(e1) = e2
+
+B(5, 4)
+A(5) = {1, 2, 3, 4, 5}
+
+
+
+Faber-Moore-Chen graph  FMCH(t, k)
+priemer k, stupen (t+1)!/(t-k+1)!
+

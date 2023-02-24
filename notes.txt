@@ -1,0 +1,45 @@
+Project - 30 points, min 15
+Exam - 70 points
+
+Shimon Even - Graph Algorithms, 1979, local Slovak and Czech authors
+
+cesta (P)
+P5:   V1 - V2 - V3 - V4 - V5 
+| 0 1 0 0 0 |
+| 1 0 1 0 0 |
+| 0 1 0 1 0 |
+| 0 0 1 0 1 |
+| 0 0 0 1 0 |
+
+cyklus (C)
+C5: ----------------------
+    |                    |
+    V1 - V2 - V3 - V4 - V5
+
+| 0 1 0 0 1 |
+| 1 0 1 0 0 |
+| 0 1 0 1 0 |
+| 0 0 1 0 1 |
+| 1 0 0 1 0 |
+    
+uplny graf (K)
+K5 - pentagramcek so spojenymi vonkajsimi vrcholmmi
+
+    ____________
+   V1_        _V2
+  / \ \__  __/ / \
+ /   \___/\___/   \
+/ ___/\      /\___ \
+V3_____\____/______V4
+ \      \  /      /
+  \      \/      /
+   \_____V5_____/
+
+
+
+
+uplny biparitny graf
+K2,3
+dve skupiny, kazdy vrchol jednej skupiny je spojeny so vsetkymi druhej
+
+
