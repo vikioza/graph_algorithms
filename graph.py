@@ -62,11 +62,14 @@ class DirectedNode(Node):
 class Graph:
     nodes: list[DirectedNode]
     
-    def __init__(self, node_count) -> None:
+    def __init__(self, node_count: int, edge_count: int = None) -> None:
+        if edge_count is None:
+            edge_count = 2*(node_count - 1)
+        
         self.nodes = []
-        self._generate_graph(node_count)
+        self._generate_graph(node_count, edge_count)
     
-    def _generate_graph(self, node_count: int, node_type: type[Node] = Node, edge_type: type[Edge] = Edge) -> None:
+    def _generate_graph(self, node_count: int, edge_count: int, node_type: type[Node] = Node, edge_type: type[Edge] = Edge) -> None:
         unvisited_nodes = []
         for i in range(node_count):
             n = node_type()
@@ -81,11 +84,12 @@ class Graph:
             if connected_nodes:  # add edge from random visited node:
                 origin: node_type = choices(connected_nodes, k=1)[0]
                 origin.edges.append(edge_type(origin, current))
+                edge_count -= 1
             
             connected_nodes.append(current)
         
         self.nodes = connected_nodes
-        self.__random_edges(node_count-1, edge_type=edge_type)
+        self.__random_edges(edge_count, edge_type=edge_type)
             
     def __random_edges(self, edge_count: int, self_loop: bool = False, edge_type: type[Edge] = Edge) -> Node:
         while edge_count:
@@ -116,9 +120,12 @@ class Graph:
 class DirectedGraph(Graph):
     nodes: list[DirectedNode]
     
-    def __init__(self, node_count) -> None:
+    def __init__(self, node_count, edge_count: int = None) -> None:
+        if edge_count is None:
+            edge_count = 2*(node_count - 1)
+        
         self.nodes = []
-        self._generate_graph(node_count, DirectedNode, DirectedEdge)
+        self._generate_graph(node_count, edge_count, DirectedNode, DirectedEdge)
         
     def __repr__(self):
         return super().__repr__()
