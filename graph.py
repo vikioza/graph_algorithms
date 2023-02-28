@@ -120,7 +120,7 @@ class Graph:
 class DirectedGraph(Graph):
     nodes: list[DirectedNode]
     
-    def __init__(self, node_count, edge_count: int = None) -> None:
+    def __init__(self, node_count: int, edge_count: int = None) -> None:
         if edge_count is None:
             edge_count = 2*(node_count - 1)
         
