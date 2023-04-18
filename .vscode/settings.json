@@ -1,6 +1,6 @@
 {
     "python.testing.pytestArgs": [
-        "project_8_2"
+        "."
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true

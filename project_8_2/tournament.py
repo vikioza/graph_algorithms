@@ -11,20 +11,21 @@ class InvalidTeamCount(TournamentException):
 
 
 class Tournament:
+    graph: object
     
     def __init__(self, team_count):
         if team_count % 2:
             raise InvalidTeamCount("Team count has to be a multiple of 2")
         self.team_count = team_count
+        self.day_count = 2 * (self.team_count - 1)
+        self.__generate_graph()
         
+    def __generate_graph(self):
+        self.graph = None
+        for idx in range(1, self.day_count+1):  # actually move this to graph class
+            # TODO some logic for adding edges
+            pass
         
-
 
 if __name__ == "__main__":  # Test scenarios
-    def test_1():
-        tour = Tournament(5)
-        
-    def test_2():
-        pass
-    
-    test_1()
+    pass

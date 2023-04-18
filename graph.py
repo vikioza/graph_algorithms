@@ -10,8 +10,11 @@ class Edge:
     weight: int
     connecting_nodes: list[Node]
     
-    def __init__(self, node1: Node = None, node2: Node = None) -> None:
-        self.weight = randrange(-10, 10, 1)
+    def __init__(self, node1: Node = None, node2: Node = None, weight: int = None) -> None:
+        if weight is None:
+            weight = randrange(-10, 10, 1)
+        self.weight = weight
+        
         if node1 is not None and node2 is not None:
             self.connecting_nodes = [node1, node2]
 
@@ -21,8 +24,8 @@ class DirectedEdge(Edge):
     starting_node: Node
     destination_node: Node
     
-    def __init__(self, start: Node, destination: Node) -> None:
-        super().__init__()
+    def __init__(self, start: Node, destination: Node, weight: int = None) -> None:
+        super().__init__(weight)
         self.starting_node = start
         self.destination_node = destination
         
