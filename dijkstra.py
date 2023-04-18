@@ -1,6 +1,6 @@
 import sys
-from typing import List
 from dataclasses import dataclass
+from graph import Node, Graph
     
     
 class DijHeap:
@@ -19,12 +19,12 @@ class Dijkstra:
     initial_node_idx: int
     target_node_idx: int
     
-    nodes: List[Node] = []
-    node_connections: List[List[int]]
+    nodes: list[Node] = []
+    node_connections: list[list[int]]
     
     heap = DijHeap()
     
-    def __init__(self, node_connections: List[List[int]], initial_node_idx: int = 0, target_node_idx: int = 0) -> None:
+    def __init__(self, node_connections: list[list[int]], initial_node_idx: int = 0, target_node_idx: int = 0) -> None:
         self.node_connections = node_connections
         self.initial_node_idx = initial_node_idx
         self.target_node_idx = target_node_idx

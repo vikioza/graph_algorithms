@@ -1,0 +1,30 @@
+De Bruijn
+- cyklicka postupnost pismen z abecedy, v ktorej sa kazde slovo dlzky k nachadza prave raz
+- cyklicka postupnost pismen z abecedy, v ktorej sa kazde slovo dlzky k nachadza prave raz
+- napr. abeceda 0, 1
+    - 000, 001, 010, 011, 100, 101, 110, 111 su vsetky trojice
+    - 00011101(00 z dalsieho cyklu) je hladana postupnost
+- vrcholy su vsetko (k-1)-tice
+- orientovane hrany
+- X1...X(k-1) -> X2...X(k-1)Y(k-1)   ->   orientovana hrana je k-tica X1,X2...X(k-1)Y(k-1)
+- eulerovsky tah reprezentuje nadretazec obsahujuci kazdu k-ticu prave raz
+
+
+Overlap Graphs
+- dvojice su vrcholy???
+
+
+Faber - Moore - Chen
+- cycle prefix digraghs
+- vrcholy su k-permutacie abecedy A
+- X1...Xk
+    -> X1...Xi...Xk -> X1...XkXi
+    -> X1X2...Xk -> X2...XkX(k+1)  X(k+1) != X1...Xk
+
+
+Cayley graph
+- Cay(Z6, {1, 3, 5})
+- Cay(Z6, {2, 3, 4})
+- Cay(Z2xZ3, {02, 01, 10})
+
+
