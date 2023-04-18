@@ -27,7 +27,7 @@ class DirectedEdge(Edge):
         self.destination_node = destination
         
     def __repr__(self):
-        return f"\nEdge {self.weight} | Start: {self.starting_node.designation} | Dest: {self.destination_node.designation}"
+        return f"\n\tEdge {self.weight} | Start: {self.starting_node.designation} | Dest: {self.destination_node.designation}"
 
 
 @dataclass()
@@ -134,6 +134,9 @@ class DirectedGraph(Graph):
 if __name__ == "__main__":
     n = 30
     g = DirectedGraph(n)
+    
+    print(g)
+    
     adj = g.adjacency_matrix()
     letters = [f"{num:04d}" for num in range(n)]
     letters = ["_____"] + letters
